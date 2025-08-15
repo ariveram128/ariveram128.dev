@@ -29,8 +29,8 @@ export default function AboutPage() {
           </div>
         </div>
         <div className="justify-self-center md:justify-self-end">
-          <div className="relative h-44 w-44 rounded-full overflow-hidden ring-2 ring-black/10 dark:ring-white/15">
-            <Image src="/next.svg" alt="Professional photo placeholder" fill className="object-contain p-6 dark:invert" />
+          <div className="relative h-44 w-44 rounded-full overflow-hidden ring-2 ring-blue-200/50 dark:ring-blue-400/30 ring-offset-4 ring-offset-background">
+            <Image src="/profile.jpg" alt="Marvin Rivera Martinez" fill className="object-cover" />
           </div>
         </div>
       </section>

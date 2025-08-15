@@ -78,10 +78,11 @@ export default function Hero() {
             <div className="relative h-64 w-64 md:h-80 md:w-80 rounded-full overflow-hidden glass border-2 border-white/30 backdrop-blur-lg float">
               <div className="absolute inset-2 rounded-full bg-gradient-to-br from-blue-400/20 via-purple-500/20 to-pink-500/20"></div>
               <Image 
-                src="/next.svg" 
+                src="/profile.jpg" 
                 alt="Marvin Rivera Martinez" 
                 fill 
-                className="object-contain p-12 dark:invert relative z-10" 
+                className="object-cover relative z-10" 
+                priority
               />
             </div>
             
