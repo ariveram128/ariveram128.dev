@@ -53,18 +53,16 @@ export default function Hero() {
             
             <Link 
               href="/resume" 
-              className="px-8 py-4 rounded-xl glass border border-white/20 backdrop-blur-sm font-semibold epic-hover hover:border-blue-300/50"
+              className="group relative px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold overflow-hidden epic-hover pulse-glow"
             >
-              View Resume
+              <span className="relative z-10">View Resume</span>
             </Link>
             
             <Link 
               href="/contact" 
-              className="px-8 py-4 rounded-xl border-2 border-transparent bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-border epic-hover"
+              className="group relative px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold overflow-hidden epic-hover pulse-glow"
             >
-              <span className="block bg-background dark:bg-slate-900 rounded-lg px-6 py-2 font-semibold">
-                Contact Me
-              </span>
+              <span className="relative z-10">Contact Me</span>
             </Link>
           </div>
         </div>
