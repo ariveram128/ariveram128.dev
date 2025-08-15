@@ -51,9 +51,9 @@ export default function Home() {
           </p>
         </div>
         
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr">
           {featured.map((project, index) => (
-            <div key={project.id} style={{ animationDelay: `${index * 0.1}s` }}>
+            <div key={project.id} style={{ animationDelay: `${index * 0.1}s` }} className="flex">
               <ProjectCard project={project} />
             </div>
           ))}

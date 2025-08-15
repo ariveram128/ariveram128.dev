@@ -19,7 +19,7 @@ const categoryColors = {
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="group relative rounded-2xl glass border border-white/20 backdrop-blur-lg overflow-hidden epic-hover slide-in-up">
+    <article className="group relative rounded-2xl glass border border-white/20 backdrop-blur-lg overflow-hidden epic-hover slide-in-up flex-1 flex flex-col">
       {/* Category badge */}
       <div className="absolute top-4 left-4 z-10">
         <div className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r ${categoryColors[project.category]}`}>
@@ -76,7 +76,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       </div>
 
       {/* Content */}
-      <div className="p-6">
+      <div className="p-6 flex-1 flex flex-col">
         <div className="flex items-start justify-between gap-2 mb-3">
           <h3 className="text-lg font-bold tracking-tight group-hover:gradient-text transition-all duration-300">
             {project.title}
@@ -84,12 +84,12 @@ export default function ProjectCard({ project }: { project: Project }) {
           <Zap className="h-5 w-5 text-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </div>
         
-        <p className="text-sm text-foreground/70 mb-4 line-clamp-2">
+        <p className="text-sm text-foreground/70 mb-4 flex-1">
           {project.description}
         </p>
         
         {/* Tech stack */}
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 mt-auto">
           {project.technologies.slice(0, 4).map((tech, index) => (
             <span 
               key={tech} 
