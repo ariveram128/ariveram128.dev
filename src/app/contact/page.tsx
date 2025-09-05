@@ -48,7 +48,7 @@ export default function ContactPage() {
             <ContactForm />
           </div>
           
-          <aside className="space-y-6">
+          <aside className="space-y-2">
             {/* Contact Info */}
             <div className="glass rounded-xl p-6 border border-white/20 backdrop-blur-sm">
               <h3 className="font-semibold text-lg mb-4 flex items-center gap-2">

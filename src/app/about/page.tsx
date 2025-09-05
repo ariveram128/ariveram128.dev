@@ -70,7 +70,7 @@ export default function AboutPage() {
       </section>
 
       {/* Education section */}
-      <section className="max-w-6xl mx-auto px-4 py-16">
+      <section className="max-w-6xl mx-auto px-4 py-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
             <span className="gradient-text">Education</span>
@@ -144,7 +144,7 @@ export default function AboutPage() {
       <SkillsGrid />
       
       {/* Interests section */}
-      <section className="max-w-6xl mx-auto px-4 py-16">
+      <section className="max-w-6xl mx-auto px-4 py-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
             <span className="gradient-text">Interests & Passions</span>
