@@ -52,7 +52,7 @@ export default function ExperiencePage() {
 
       {/* Experience Timeline */}
       <section className="max-w-6xl mx-auto px-4 py-4">
-        <div className="space-y-8">
+        <div className="space-y-4">
           {experiences.map((item, index) => (
             <div
               key={item.id}

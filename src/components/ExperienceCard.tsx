@@ -12,7 +12,7 @@ export default function ExperienceCard({ item }: { item: Experience }) {
   const IconComponent = getCompanyIcon(item.company);
   
   return (
-    <article className="relative pl-8 pb-8 group">
+    <article className="relative pl-8 pb-2 group">
       {/* Timeline Dot with Glow */}
       <div className="absolute left-0 top-2 h-4 w-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg shadow-blue-500/50 border-2 border-white/20 group-hover:shadow-blue-400/70 transition-all duration-300" />
       
