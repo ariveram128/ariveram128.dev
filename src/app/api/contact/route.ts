@@ -12,7 +12,7 @@ export async function POST(request: Request) {
     console.log("Contact form submission", { name, email, subject, message });
 
     return NextResponse.json({ ok: true });
-  } catch (err) {
+  } catch {
     return NextResponse.json({ error: "Invalid request" }, { status: 400 });
   }
 }

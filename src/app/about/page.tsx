@@ -41,7 +41,7 @@ export default function AboutPage() {
               </div>
               <div className="flex items-center gap-2 px-4 py-2 rounded-lg glass border border-white/20 backdrop-blur-sm">
                 <Award className="h-4 w-4 text-yellow-600" />
-                <span className="text-sm">Dean's List</span>
+                <span className="text-sm">Dean&apos;s List</span>
               </div>
             </div>
           </div>
@@ -107,7 +107,7 @@ export default function AboutPage() {
                   <span className="text-sm font-medium">Honors & Recognition</span>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  <span className="text-xs px-3 py-1 rounded-full bg-yellow-100/80 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 border border-yellow-200/60">Dean's List</span>
+                  <span className="text-xs px-3 py-1 rounded-full bg-yellow-100/80 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 border border-yellow-200/60">Dean&apos;s List</span>
                   <span className="text-xs px-3 py-1 rounded-full bg-purple-100/80 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200/60">QuestBridge Scholar</span>
                 </div>
               </div>

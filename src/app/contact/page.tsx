@@ -3,7 +3,7 @@ import { Mail, MapPin, MessageCircle, Send, Github, Linkedin } from "lucide-reac
 
 export const metadata = {
   title: "Contact | Marvin Rivera",
-  description: "Get in touch with Marvin Rivera - Let's build something amazing together.",
+  description: "Get in touch with Marvin Rivera - Let&apos;s build something amazing together.",
 };
 
 export default function ContactPage() {
@@ -36,7 +36,7 @@ export default function ContactPage() {
 
           {/* Compact Subtitle */}
           <p className="text-lg text-foreground/80 max-w-2xl mx-auto leading-relaxed mb-6 animate-slide-in-up" style={{ animationDelay: "0.4s" }}>
-            Let's build something amazing together. I'm always open to discussing new opportunities and innovative projects.
+            Let&apos;s build something amazing together. I&apos;m always open to discussing new opportunities and innovative projects.
           </p>
         </div>
       </section>
