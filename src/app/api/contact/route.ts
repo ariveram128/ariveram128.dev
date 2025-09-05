@@ -19,35 +19,23 @@ export async function POST(request: Request) {
 
     // Send email using Resend
     const { data, error } = await resend.emails.send({
-      from: process.env.FROM_EMAIL || "contact@ariveram128.dev",
+      from: process.env.FROM_EMAIL || "Portfolio Contact <onboarding@resend.dev>",
       to: process.env.TO_EMAIL || "mrvnlxndrrvr2@gmail.com",
       replyTo: email,
       subject: `Portfolio Contact: ${subject}`,
       html: `
-        <div style="font-family: system-ui, -apple-system, sans-serif; max-width: 600px; margin: 0 auto;">
-          <div style="background: linear-gradient(135deg, #3b82f6, #8b5cf6); padding: 24px; border-radius: 12px 12px 0 0;">
-            <h1 style="color: white; margin: 0; font-size: 24px;">New Contact Form Submission</h1>
-          </div>
+        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #333; line-height: 1.6;">
+          <p>Hi Marvin,</p>
           
-          <div style="background: #f8fafc; padding: 24px; border-radius: 0 0 12px 12px; border: 1px solid #e2e8f0;">
-            <div style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 16px; border-left: 4px solid #3b82f6;">
-              <h2 style="margin: 0 0 8px 0; color: #1e293b; font-size: 18px;">Contact Information</h2>
-              <p style="margin: 4px 0; color: #475569;"><strong>Name:</strong> ${name}</p>
-              <p style="margin: 4px 0; color: #475569;"><strong>Email:</strong> ${email}</p>
-              <p style="margin: 4px 0; color: #475569;"><strong>Subject:</strong> ${subject}</p>
-            </div>
-            
-            <div style="background: white; padding: 20px; border-radius: 8px; border-left: 4px solid #8b5cf6;">
-              <h2 style="margin: 0 0 12px 0; color: #1e293b; font-size: 18px;">Message</h2>
-              <div style="color: #475569; line-height: 1.6; white-space: pre-wrap;">${message}</div>
-            </div>
-            
-            <div style="margin-top: 20px; padding: 16px; background: #eff6ff; border-radius: 8px; border: 1px solid #bfdbfe;">
-              <p style="margin: 0; color: #1e40af; font-size: 14px; text-align: center;">
-                💡 Reply directly to this email to respond to ${name}
-              </p>
-            </div>
-          </div>
+          <p>You received a new message through your portfolio contact form:</p>
+          
+          <p><strong>From:</strong> ${name} (${email})</p>
+          <p><strong>Subject:</strong> ${subject}</p>
+          
+          <p><strong>Message:</strong></p>
+          <div style="background: #f5f5f5; padding: 15px; border-radius: 5px; margin: 15px 0; white-space: pre-wrap;">${message}</div>
+          
+          <p style="color: #666; font-size: 14px;">Reply directly to this email to respond to ${name}.</p>
         </div>
       `,
       text: `
