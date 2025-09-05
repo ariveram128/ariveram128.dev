@@ -45,12 +45,18 @@ export default function ContactPage() {
       <section className="max-w-6xl mx-auto px-4 py-4">
         <div className="grid md:grid-cols-3 gap-8">
           <div className="md:col-span-2">
-            <ContactForm />
+            <div className="glass rounded-xl p-6 border border-white/20 backdrop-blur-sm epic-hover">
+              <h2 className="font-semibold text-xl mb-6 flex items-center gap-2">
+                <Send className="h-5 w-5 text-blue-600" />
+                Send me a message
+              </h2>
+              <ContactForm />
+            </div>
           </div>
           
           <aside className="space-y-2">
             {/* Contact Info */}
-            <div className="glass rounded-xl p-6 border border-white/20 backdrop-blur-sm">
+            <div className="glass rounded-xl p-6 border border-white/20 backdrop-blur-sm epic-hover">
               <h3 className="font-semibold text-lg mb-4 flex items-center gap-2">
                 <Mail className="h-5 w-5 text-blue-600" />
                 Contact Information
@@ -74,7 +80,7 @@ export default function ContactPage() {
             </div>
 
             {/* Social Links */}
-            <div className="glass rounded-xl p-6 border border-white/20 backdrop-blur-sm">
+            <div className="glass rounded-xl p-6 border border-white/20 backdrop-blur-sm epic-hover">
               <h3 className="font-semibold text-lg mb-4">Connect With Me</h3>
               <div className="space-y-3">
                 <a 
