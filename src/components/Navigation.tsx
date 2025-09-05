@@ -53,29 +53,29 @@ export default function Navigation() {
         
         <div className="flex items-center gap-2">
           <a
-            className="p-2.5 rounded-xl glass border border-white/20 hover:border-blue-300/50 transition-all duration-300 epic-hover"
+            className="p-2.5 rounded-xl glass border border-white/20 hover:border-gray-400/50 hover:bg-gray-100/10 transition-all duration-300 epic-hover group"
             href="https://github.com/ariveram128"
             aria-label="GitHub"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Github className="h-4 w-4" />
+            <Github className="h-4 w-4 text-gray-600 dark:text-gray-400 group-hover:text-gray-800 dark:group-hover:text-white transition-colors duration-300" />
           </a>
           <a
-            className="p-2.5 rounded-xl glass border border-white/20 hover:border-blue-300/50 transition-all duration-300 epic-hover"
+            className="p-2.5 rounded-xl glass border border-white/20 hover:border-blue-400/50 hover:bg-blue-100/10 transition-all duration-300 epic-hover group"
             href="https://linkedin.com/in/ariveram128"
             aria-label="LinkedIn"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Linkedin className="h-4 w-4" />
+            <Linkedin className="h-4 w-4 text-blue-600 dark:text-blue-400 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300" />
           </a>
           <a
-            className="p-2.5 rounded-xl glass border border-white/20 hover:border-blue-300/50 transition-all duration-300 epic-hover"
+            className="p-2.5 rounded-xl glass border border-white/20 hover:border-red-400/50 hover:bg-red-100/10 transition-all duration-300 epic-hover group"
             href="mailto:mrvnlxndrrvr2@gmail.com"
             aria-label="Email"
           >
-            <Mail className="h-4 w-4" />
+            <Mail className="h-4 w-4 text-red-600 dark:text-red-400 group-hover:text-red-700 dark:group-hover:text-red-300 transition-colors duration-300" />
           </a>
           <ThemeToggle />
         </div>

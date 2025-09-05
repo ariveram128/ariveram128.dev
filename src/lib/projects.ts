@@ -8,7 +8,7 @@ export const projects: Project[] = [
     longDescription:
       "Designed NFC reader and BLE gateway firmware using Zephyr RTOS and nRF Connect SDK to manage rentals between devices. Implemented device pairing, tag scanning, and a simple rental database with robust state handling.",
     technologies: ["nRF52840", "BLE", "NFC", "Zephyr RTOS", "nRF Connect SDK", "C"],
-    imageUrl: "/next.svg",
+    imageUrl: "",
     featured: true,
     category: "embedded",
   },
@@ -19,7 +19,7 @@ export const projects: Project[] = [
     longDescription:
       "Built a RISC-V RV32I core in Verilog including controller, datapath, and custom address decoding to interface RAM, ROM, and a memory-mapped UART. Verified modules in ModelSim and integrated top-level system.",
     technologies: ["Verilog", "RISC-V", "UART", "ModelSim"],
-    imageUrl: "/next.svg",
+    imageUrl: "",
     featured: true,
     category: "hardware",
   },
@@ -30,7 +30,7 @@ export const projects: Project[] = [
     longDescription:
       "Architected and implemented authentication (Google OAuth2), role-based access control, rental/return logic, and S3-backed media storage. Deployed with a managed Postgres database.",
     technologies: ["Django", "Python", "PostgreSQL", "AWS S3"],
-    imageUrl: "/next.svg",
+    imageUrl: "",
     featured: true,
     category: "web",
   },
@@ -41,7 +41,7 @@ export const projects: Project[] = [
     longDescription:
       "Led development of a TM4C123 game in an RTOS environment. Implemented sound design, game state logic, and joystick input processing; ensured deadlock-free concurrency.",
     technologies: ["TM4C123", "RTOS", "Keil", "C"],
-    imageUrl: "/next.svg",
+    imageUrl: "",
     featured: false,
     category: "embedded",
   },
@@ -52,7 +52,7 @@ export const projects: Project[] = [
     longDescription:
       "Investigated entity-specific biases in NLP models by analyzing response shifts to perturbed inputs varying nationality and gender attributes.",
     technologies: ["Python", "NLP"],
-    imageUrl: "/next.svg",
+    imageUrl: "",
     featured: false,
     category: "software",
   },

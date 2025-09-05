@@ -1,7 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
 import type { Project } from "@/types";
 import { Github, ExternalLink, Zap, Star } from "lucide-react";
+import ProjectIcon from "./ProjectIcons";
 
 const categoryIcons = {
   hardware: "🔧",
@@ -38,15 +38,11 @@ export default function ProjectCard({ project }: { project: Project }) {
         </div>
       )}
 
-      {/* Project image with gradient overlay */}
-      <div className="relative h-48 bg-gradient-to-br from-blue-50/50 to-purple-50/50 dark:from-slate-800/50 dark:to-purple-900/50 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-        <Image 
-          src={project.imageUrl} 
-          alt="Project preview" 
-          fill 
-          className="object-contain p-8 dark:invert transition-transform duration-300 group-hover:scale-105" 
-        />
+      {/* Project icon */}
+      <div className="relative h-64 overflow-hidden">
+        <div className="absolute inset-0 transition-transform duration-300 group-hover:scale-105">
+          <ProjectIcon projectId={project.id} className="h-full w-full" />
+        </div>
         
         {/* Floating action buttons */}
         <div className="absolute bottom-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
