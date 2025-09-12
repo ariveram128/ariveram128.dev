@@ -5,7 +5,7 @@ import { Download, FileText, ExternalLink, Eye, Maximize2 } from "lucide-react";
 
 export default function ResumePage() {
   const [pdfError, setPdfError] = useState(false);
-  const resumePdfPath = "/Marvin_Rivera_Resume_August_2025.pdf";
+  const resumePdfPath = "/Marvin_Rivera_Resume_September_2025.pdf";
 
   return (
     <main className="min-h-screen">
