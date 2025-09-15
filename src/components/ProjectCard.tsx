@@ -102,8 +102,8 @@ export default function ProjectCard({ project }: { project: Project }) {
               
               {/* Project Info */}
               <div className="space-y-3">
-                <h3 className="text-xl font-bold text-white leading-tight">{project.title}</h3>
-                <p className="text-sm text-gray-300 leading-relaxed">{project.description}</p>
+                <h3 className="text-xl font-bold text-white leading-tight h-12 flex items-start">{project.title}</h3>
+                <p className="text-sm text-gray-300 leading-relaxed h-16 flex items-start">{project.description}</p>
                 
                 {/* Interactive hints */}
                 <div className="flex items-center justify-between pt-2 border-t border-white/10">
@@ -156,16 +156,16 @@ export default function ProjectCard({ project }: { project: Project }) {
               </div>
             </div>
 
-            <p className="text-sm text-gray-300 mb-4 flex-1">{project.description}</p>
+            <p className="text-sm text-gray-300 mb-4">{project.description}</p>
 
             {/* Tech stack */}
-            <div className="space-y-3">
-              <h4 className="text-sm font-semibold text-white">Tech Stack</h4>
-              <div className="flex flex-wrap gap-1.5">
+            <div className="flex-1 flex flex-col min-h-0 mb-2">
+              <h4 className="text-sm font-semibold text-white mb-2">Tech Stack</h4>
+              <div className="flex flex-wrap gap-1.5 items-start justify-start">
                 {project.technologies.map((tech, index) => (
                   <span 
                     key={tech} 
-                    className="px-2 py-1 text-xs font-medium rounded-full glass border border-white/20 text-blue-400"
+                    className="px-2 py-1 text-xs font-medium rounded-full glass border border-white/20 text-blue-400 flex-shrink-0"
                   >
                     {tech}
                   </span>
@@ -174,7 +174,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             </div>
 
             {/* Click to expand hint */}
-            <div className="mt-4 flex items-center justify-center text-xs text-gray-400">
+            <div className="mt-auto pt-3 flex items-center justify-center text-xs text-gray-400 border-t border-white/10">
               <span>Click for details</span>
               <ChevronRight className="h-3 w-3 ml-1" />
             </div>
@@ -195,7 +195,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             {/* Close button */}
             <button
               onClick={() => setShowModal(false)}
-              className="absolute top-4 right-4 p-2 rounded-lg glass border border-white/20 text-white hover:bg-white/10 transition-colors z-10 animate-slide-in-from-right"
+              className="absolute top-3 right-3 p-2 rounded-lg glass border border-white/20 text-white hover:bg-white/10 transition-colors z-20 animate-slide-in-from-right"
               style={{ animationDelay: "0.3s", animationFillMode: "both" }}
             >
               <X className="h-4 w-4" />
@@ -205,15 +205,15 @@ export default function ProjectCard({ project }: { project: Project }) {
             <div className="h-full overflow-y-auto custom-scrollbar">
               <div className="p-4">
                 {/* Header */}
-                <div className="flex items-start gap-4 mb-4">
+                <div className="flex items-start gap-4 mb-4 pr-12">
                   <div className="flex-shrink-0 w-12 h-12 rounded-lg overflow-hidden flex items-center justify-center glass border border-white/20">
                     <ProjectIcon projectId={project.id} className="w-8 h-8" />
                   </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <h2 className="text-2xl font-bold text-white">{project.title}</h2>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-3 mb-2 flex-wrap">
+                      <h2 className="text-2xl font-bold text-white flex-shrink-0">{project.title}</h2>
                       {project.featured && (
-                        <div className="flex items-center gap-1 px-2 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-xs font-medium text-white">
+                        <div className="flex items-center gap-1 px-2 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-xs font-medium text-white flex-shrink-0">
                           <Star className="h-3 w-3" />
                           Featured
                         </div>

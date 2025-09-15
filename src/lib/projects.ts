@@ -81,7 +81,7 @@ export const projects: Project[] = [
     description: "First-author research investigating NLP model biases using Perturbation Sensitivity Analysis framework.",
     longDescription:
       "Led independent research on entity-specific biases in NLP models, developing novel evaluation frameworks and analysis methods for bias detection in text classification.",
-    technologies: ["Python", "NLP", "Machine Learning", "Statistical Analysis", "Research", "Bias Detection"],
+    technologies: ["Python", "NLP", "Research", "Machine Learning", "Statistical Analysis", "Bias Detection"],
     keyHighlights: [
       "Adapted Perturbation Sensitivity Analysis (PSA) framework for quantifying bias across nationality, gender, and names",
       "Constructed custom corpora using Tatoeba, Wikipedia, RtGender, and Python names-dataset for bias evaluation",
