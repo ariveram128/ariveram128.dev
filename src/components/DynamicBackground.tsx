@@ -104,14 +104,47 @@ export default function DynamicBackground() {
         style={gradientStyle}
       />
       
-      {/* Subtle animated particles/dots */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-blue-400 rounded-full animate-pulse" />
-        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-purple-400 rounded-full animate-pulse" style={{ animationDelay: "1s" }} />
-        <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-pink-400 rounded-full animate-pulse" style={{ animationDelay: "2s" }} />
-        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 bg-cyan-400 rounded-full animate-pulse" style={{ animationDelay: "3s" }} />
-        <div className="absolute top-2/3 left-1/2 w-1 h-1 bg-blue-300 rounded-full animate-pulse" style={{ animationDelay: "0.5s" }} />
-        <div className="absolute top-1/2 right-1/2 w-1 h-1 bg-purple-300 rounded-full animate-pulse" style={{ animationDelay: "1.5s" }} />
+      {/* Smooth Starfield Animation */}
+      <div className="absolute inset-0">
+        {/* Floating star particles with constant smooth animation */}
+        {Array.from({ length: 80 }, (_, i) => {
+          // Random positioning across the screen
+          const x = Math.random() * 100; // 0-100% of screen width
+          const y = Math.random() * 100; // 0-100% of screen height
+          
+          const size = Math.random() * 3 + 1; // Random size 1-4px
+          const opacity = 0.3 + Math.random() * 0.7; // Random opacity
+          const animationDelay = Math.random() * 10; // Random delay 0-10s
+          const animationDuration = 8 + Math.random() * 12; // Random duration 8-20s
+          
+          const colors = [
+            `rgba(255, 255, 255, ${opacity})`, // white
+            `rgba(59, 130, 246, ${opacity})`, // blue
+            `rgba(147, 51, 234, ${opacity})`, // purple  
+            `rgba(236, 72, 153, ${opacity})`, // pink
+            `rgba(34, 197, 94, ${opacity})`,  // green
+            `rgba(251, 191, 36, ${opacity})`, // yellow
+            `rgba(168, 85, 247, ${opacity})`, // violet
+            `rgba(14, 165, 233, ${opacity})`, // sky
+          ];
+          
+          return (
+            <div
+              key={`star-${i}`}
+              className="absolute rounded-full animate-float"
+              style={{
+                width: `${size}px`,
+                height: `${size}px`,
+                backgroundColor: colors[i % colors.length],
+                left: `${x}%`,
+                top: `${y}%`,
+                animationDelay: `${animationDelay}s`,
+                animationDuration: `${animationDuration}s`,
+                opacity: opacity
+              }}
+            />
+          );
+        })}
       </div>
       
       {/* Subtle mesh pattern overlay */}
