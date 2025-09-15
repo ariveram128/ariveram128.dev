@@ -195,10 +195,10 @@ export default function ProjectCard({ project }: { project: Project }) {
             {/* Close button */}
             <button
               onClick={() => setShowModal(false)}
-              className="absolute top-3 right-3 p-2 rounded-lg glass border border-white/20 text-white hover:bg-white/10 transition-colors z-20 animate-slide-in-from-right"
+              className="absolute top-3 right-3 p-2 rounded-lg glass border border-white/20 text-white hover:bg-red-500/20 hover:border-red-400/50 hover:text-red-300 hover:scale-110 transition-all duration-300 z-20 animate-slide-in-from-right group"
               style={{ animationDelay: "0.3s", animationFillMode: "both" }}
             >
-              <X className="h-4 w-4" />
+              <X className="h-4 w-4 group-hover:rotate-90 transition-transform duration-300" />
             </button>
 
             {/* Scrollable content wrapper */}
