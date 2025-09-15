@@ -103,7 +103,7 @@ export default function ProjectCard({ project }: { project: Project }) {
               {/* Project Info */}
               <div className="space-y-3">
                 <h3 className="text-xl font-bold text-white leading-tight">{project.title}</h3>
-                <p className="text-sm text-gray-300 leading-relaxed line-clamp-2">{project.description}</p>
+                <p className="text-sm text-gray-300 leading-relaxed">{project.description}</p>
                 
                 {/* Interactive hints */}
                 <div className="flex items-center justify-between pt-2 border-t border-white/10">
