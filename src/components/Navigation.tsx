@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Github, Linkedin, Mail } from "lucide-react";
-import ThemeToggle from "./ThemeToggle";
 import Logo from "./Logo";
 
 const routes = [
@@ -76,7 +75,6 @@ export default function Navigation() {
           >
             <Mail className="h-4 w-4 text-red-600 dark:text-red-400 group-hover:text-red-700 dark:group-hover:text-red-300 transition-colors duration-300" />
           </a>
-          <ThemeToggle />
         </div>
       </div>
       
