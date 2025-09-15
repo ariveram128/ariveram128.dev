@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Github, Linkedin, Mail, Sparkles } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
+import Logo from "./Logo";
 
 const routes = [
   { href: "/", label: "Home" },
@@ -20,10 +21,8 @@ export default function Navigation() {
   return (
     <header className="sticky top-0 z-50 glass border-b border-white/20 backdrop-blur-xl">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-4">
-        <Link href="/" className="group flex items-center gap-2 font-bold text-xl tracking-tight epic-hover">
-          <div className="p-2 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white group-hover:from-purple-600 group-hover:to-pink-600 transition-all duration-300">
-            <Sparkles className="h-5 w-5" />
-          </div>
+        <Link href="/" className="group flex items-center gap-3 font-bold text-xl tracking-tight epic-hover">
+          <Logo className="w-12 h-12 group-hover:scale-110 transition-transform duration-300" />
           <span className="gradient-text">Marvin Rivera Martinez</span>
         </Link>
         
