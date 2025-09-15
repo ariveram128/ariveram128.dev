@@ -100,8 +100,14 @@ export const projects: Project[] = [
     title: "Memory Integration and Data Logging System",
     description: "Advanced embedded system unifying multiple SPI and I2C flash memory devices with data acquisition.",
     longDescription:
-      "Designed and implemented a memory map system that unified access to multiple SPI and I2C flash memory devices. Developed low-level ReadByte() and WriteByte() functions to create a continuous address space across six different memory devices. Implemented a data acquisition system that sampled analog signals, processed data, and stored values to external memory. Conducted performance analysis measuring maximum sampling frequencies across different configurations with accuracy within 1.1% of theoretical calculations.",
+      "Advanced embedded system with unified memory mapping across multiple flash devices and real-time data acquisition capabilities.",
     technologies: ["C", "SPI", "I2C", "Embedded Systems", "Data Acquisition", "Memory Management"],
+    keyHighlights: [
+      "Designed memory map system unifying access to six different SPI and I2C flash memory devices",
+      "Developed low-level ReadByte() and WriteByte() functions creating continuous address space architecture",
+      "Implemented real-time data acquisition system sampling analog signals and storing to external memory",
+      "Achieved performance analysis accuracy within 1.1% of theoretical calculations across multiple configurations"
+    ],
     imageUrl: "",
     githubUrl: "",
     featured: false,
@@ -112,8 +118,14 @@ export const projects: Project[] = [
     title: "DC-to-DC Boost Converter Circuit",
     description: "Custom boost converter design with 555 timer PWM control, achieving 5V to 14V step-up conversion.",
     longDescription:
-      "Designed a DC-to-DC boost converter using a 555 timer to generate PWM signals for MOSFET switching. Calculated optimal component values through circuit analysis to achieve voltage step-up from 5V to 14V. Created PCB layout in Ultiboard with proper ground plane, trace routing, and component placement. Assembled and tested the physical circuit, verifying performance through oscilloscope measurements that matched theoretical calculations within 5% tolerance.",
+      "Power electronics project featuring custom boost converter circuit with 555 timer PWM control and comprehensive PCB design.",
     technologies: ["Circuit Design", "555 Timer", "PWM", "MOSFET", "PCB Design", "Ultiboard", "Oscilloscope"],
+    keyHighlights: [
+      "Designed 555 timer-based PWM generation system for MOSFET switching control in boost topology",
+      "Calculated optimal component values achieving precise 5V to 14V voltage step-up conversion",
+      "Created professional PCB layout in Ultiboard with proper ground plane and optimized trace routing",
+      "Verified circuit performance with oscilloscope measurements matching theoretical calculations within 5% tolerance"
+    ],
     imageUrl: "",
     githubUrl: "",
     featured: false,
@@ -124,8 +136,14 @@ export const projects: Project[] = [
     title: "UVA Course Review System",
     description: "CRUD application for course reviews with secure authentication and efficient database operations.",
     longDescription:
-      "Designed and implemented components of a CRUD application using Java, JavaFX, and SQLite database. Developed authentication system with secure password handling for user accounts. Created comprehensive test cases to verify system functionality and identify potential issues. Structured optimized database queries for efficient data retrieval in course review operations.",
+      "Full-stack desktop application for university course reviews featuring secure user authentication and optimized database operations.",
     technologies: ["Java", "JavaFX", "SQLite", "Authentication", "CRUD", "Testing"],
+    keyHighlights: [
+      "Designed and implemented complete CRUD application architecture using Java and JavaFX for desktop interface",
+      "Developed secure authentication system with encrypted password handling and user account management",
+      "Created comprehensive test suite for system functionality verification and edge case identification",
+      "Optimized SQLite database queries for efficient course review data retrieval and storage operations"
+    ],
     imageUrl: "",
     githubUrl: "",
     featured: false,
@@ -136,8 +154,14 @@ export const projects: Project[] = [
     title: "Audio Spectrum Analyzer",
     description: "Filter design and simulation project with Sallen-Key topology and frequency response analysis.",
     longDescription:
-      "Executed computer simulations to validate Sallen-Key filter designs, matching experimental results to theoretical models. Analyzed frequency response characteristics of filters with measured corner frequencies at 745Hz and 500Hz. Performed signal analysis on audio tracks to determine optimal frequency cutoff points for the system. Compiled simulation results and authored technical documentation sections for the final project report.",
+      "Signal processing project implementing Sallen-Key filter topology with comprehensive frequency response analysis and validation.",
     technologies: ["Filter Design", "Sallen-Key", "Frequency Analysis", "Simulation", "Signal Processing"],
+    keyHighlights: [
+      "Executed computer simulations validating Sallen-Key filter designs with experimental-theoretical model correlation",
+      "Analyzed frequency response characteristics measuring precise corner frequencies at 745Hz and 500Hz",
+      "Performed comprehensive signal analysis on audio tracks determining optimal frequency cutoff specifications",
+      "Compiled detailed simulation results and authored technical documentation for final project deliverables"
+    ],
     imageUrl: "",
     githubUrl: "",
     featured: false,

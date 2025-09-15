@@ -189,7 +189,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           onClick={() => setShowModal(false)}
         >
                <div
-                 className="relative w-full max-w-2xl h-[55vh] glass rounded-2xl border border-white/20 backdrop-blur-md animate-modal-enter overflow-hidden"
+                 className="relative w-full max-w-2xl max-h-[85vh] glass rounded-2xl border border-white/20 backdrop-blur-md animate-modal-enter overflow-hidden"
                  onClick={(e) => e.stopPropagation()}
                >
             {/* Close button */}
@@ -201,8 +201,8 @@ export default function ProjectCard({ project }: { project: Project }) {
               <X className="h-4 w-4 group-hover:rotate-90 transition-transform duration-300" />
             </button>
 
-            {/* Scrollable content wrapper */}
-            <div className="h-full overflow-y-auto custom-scrollbar">
+            {/* Content wrapper */}
+            <div className="flex flex-col">
               <div className="p-4">
                 {/* Header */}
                 <div className="flex items-start gap-4 mb-4 pr-12">
