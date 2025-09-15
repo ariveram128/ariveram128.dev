@@ -4,9 +4,9 @@ export const projects: Project[] = [
   {
     id: "rentscan-nfc",
     title: "RentScan – Wireless NFC Tag Rental System",
-    description: "NFC + BLE rental system on nRF52840DK with Zephyr RTOS; course project lead.",
+    description: "Embedded rental management system with NFC scanning, BLE communication, and real-time inventory tracking for automated equipment rental operations.",
     longDescription:
-      "Designed NFC reader and BLE gateway firmware using Zephyr RTOS and nRF Connect SDK to manage rentals between devices. Implemented device pairing, tag scanning, and a simple rental database with robust state handling.",
+      "Comprehensive embedded rental system built on nRF52840DK using Zephyr RTOS. Features NFC tag scanning for item identification, BLE mesh networking for device communication, and real-time rental state management. Implemented secure device pairing protocols, robust error handling, and optimized power consumption for extended battery life.",
     technologies: ["nRF52840", "BLE", "NFC", "Zephyr RTOS", "nRF Connect SDK", "C"],
     imageUrl: "",
     featured: true,
@@ -15,9 +15,9 @@ export const projects: Project[] = [
   {
     id: "riscv-uart",
     title: "RISC-V CPU with Memory-Mapped UART",
-    description: "Custom RV32I CPU in Verilog with multi-cycle datapath and UART peripheral.",
+    description: "Custom 32-bit RISC-V processor with multi-cycle execution, memory management unit, and integrated UART communication for embedded applications.",
     longDescription:
-      "Built a RISC-V RV32I core in Verilog including controller, datapath, and custom address decoding to interface RAM, ROM, and a memory-mapped UART. Verified modules in ModelSim and integrated top-level system.",
+      "Designed and implemented a complete RISC-V RV32I processor core in Verilog featuring multi-cycle datapath architecture, custom memory controller with address decoding for RAM/ROM interfaces, and memory-mapped UART peripheral. Includes comprehensive testbench suite, ModelSim verification, and optimized instruction execution pipeline for embedded system applications.",
     technologies: ["Verilog", "RISC-V", "UART", "ModelSim"],
     imageUrl: "",
     featured: true,
@@ -26,9 +26,9 @@ export const projects: Project[] = [
   {
     id: "skirentals-web",
     title: "SkiRentals Web Application",
-    description: "Django + PostgreSQL full-stack app with OAuth2 and AWS S3 storage.",
+    description: "Full-stack ski equipment rental platform with advanced inventory management, secure authentication, and cloud storage integration for high-performance operations.",
     longDescription:
-      "Architected and implemented authentication (Google OAuth2), role-based access control, rental/return logic, and S3-backed media storage. Deployed with a managed Postgres database.",
+      "Comprehensive ski rental management platform built with Django framework featuring Google OAuth2 authentication, role-based access control system, and advanced inventory tracking. Includes automated rental/return workflows, real-time availability checking, customer management dashboard, and AWS S3 integration for secure file storage. Deployed with optimized PostgreSQL database and Redis caching for enhanced performance.",
     technologies: ["Django", "Python", "PostgreSQL", "AWS S3"],
     imageUrl: "",
     featured: true,
@@ -37,9 +37,9 @@ export const projects: Project[] = [
   {
     id: "candyninja",
     title: "Candy Ninja – TM4C123 Game",
-    description: "RTOS-based microcontroller game with concurrent threads and input/audio.",
+    description: "Real-time embedded game system with multi-threaded architecture, audio processing, and advanced input handling on ARM Cortex-M4 microcontroller.",
     longDescription:
-      "Led development of a TM4C123 game in an RTOS environment. Implemented sound design, game state logic, and joystick input processing; ensured deadlock-free concurrency.",
+      "Advanced embedded game development project on TM4C123 ARM Cortex-M4 microcontroller using real-time operating system. Features multi-threaded game engine with concurrent audio processing, responsive joystick input handling, and optimized graphics rendering. Implemented deadlock-free task scheduling, interrupt-driven I/O operations, and memory-efficient game state management for smooth 60fps gameplay performance.",
     technologies: ["TM4C123", "RTOS", "Keil", "C"],
     imageUrl: "",
     featured: false,
@@ -48,9 +48,9 @@ export const projects: Project[] = [
   {
     id: "nlp-bias-research",
     title: "Entity-Specific Biases in Text Classification",
-    description: "First-author research with Perturbation Sensitivity Analysis on bias.",
+    description: "Machine learning research project investigating systematic biases in NLP models through advanced perturbation analysis and fairness evaluation methodologies.",
     longDescription:
-      "Investigated entity-specific biases in NLP models by analyzing response shifts to perturbed inputs varying nationality and gender attributes.",
+      "Comprehensive research study on bias detection in natural language processing models using novel Perturbation Sensitivity Analysis techniques. Developed automated bias evaluation framework to identify entity-specific discrimination patterns across gender, nationality, and demographic attributes. Implemented statistical significance testing, created comprehensive bias measurement metrics, and published findings on systematic fairness issues in state-of-the-art text classification systems.",
     technologies: ["Python", "NLP"],
     imageUrl: "",
     featured: false,

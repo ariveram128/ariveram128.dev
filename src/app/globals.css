@@ -396,3 +396,13 @@ body {
   animation: success-appear 0.8s ease-out 1.2s forwards;
   opacity: 0;
 }
+
+/* Custom scrollbar for modal */
+.custom-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  display: none; /* WebKit browsers */
+}
