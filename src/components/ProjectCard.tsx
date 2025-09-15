@@ -188,10 +188,10 @@ export default function ProjectCard({ project }: { project: Project }) {
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in" 
           onClick={() => setShowModal(false)}
         >
-          <div 
-            className="relative w-full max-w-2xl h-[85vh] glass rounded-2xl border border-white/20 backdrop-blur-md animate-modal-enter overflow-hidden" 
-            onClick={(e) => e.stopPropagation()}
-          >
+               <div
+                 className="relative w-full max-w-2xl h-[55vh] glass rounded-2xl border border-white/20 backdrop-blur-md animate-modal-enter overflow-hidden"
+                 onClick={(e) => e.stopPropagation()}
+               >
             {/* Close button */}
             <button
               onClick={() => setShowModal(false)}
@@ -203,9 +203,9 @@ export default function ProjectCard({ project }: { project: Project }) {
 
             {/* Scrollable content wrapper */}
             <div className="h-full overflow-y-auto custom-scrollbar">
-              <div className="p-8">
+              <div className="p-4">
                 {/* Header */}
-                <div className="flex items-start gap-4 mb-8">
+                <div className="flex items-start gap-4 mb-4">
                   <div className="flex-shrink-0 w-12 h-12 rounded-lg overflow-hidden flex items-center justify-center glass border border-white/20">
                     <ProjectIcon projectId={project.id} className="w-8 h-8" />
                   </div>
@@ -224,7 +224,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                 </div>
 
                 {/* Description Section */}
-                <div className="mb-8">
+                <div className="mb-4">
                   <h3 className="text-base font-semibold text-blue-400 mb-4">Description</h3>
                   <p className="text-gray-300 leading-relaxed">
                     {project.longDescription}
@@ -232,7 +232,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                 </div>
 
                 {/* Tech Stack Section */}
-                <div className="mb-8">
+                <div className="mb-4">
                   <h3 className="text-base font-semibold text-blue-400 mb-4">Tech Stack</h3>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => {
@@ -251,21 +251,32 @@ export default function ProjectCard({ project }: { project: Project }) {
                 </div>
 
                 {/* Key Highlights Section */}
-                <div className="mb-8">
+                <div className="mb-4">
                   <h3 className="text-base font-semibold text-blue-400 mb-4">Key Highlights</h3>
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-3 text-gray-300">
-                      <div className="w-1 h-1 rounded-full bg-gray-400 mt-2 flex-shrink-0"></div>
-                      <span>Built using modern {project.category} development practices</span>
-                    </li>
-                    <li className="flex items-start gap-3 text-gray-300">
-                      <div className="w-1 h-1 rounded-full bg-gray-400 mt-2 flex-shrink-0"></div>
-                      <span>Integrated {project.technologies.length} different technologies</span>
-                    </li>
-                    <li className="flex items-start gap-3 text-gray-300">
-                      <div className="w-1 h-1 rounded-full bg-gray-400 mt-2 flex-shrink-0"></div>
-                      <span>Part of ongoing computer engineering portfolio</span>
-                    </li>
+                  <ul className="space-y-2">
+                    {project.keyHighlights && project.keyHighlights.length > 0 ? (
+                      project.keyHighlights.map((highlight, index) => (
+                        <li key={index} className="flex items-start gap-3 text-gray-300">
+                          <div className="w-1 h-1 rounded-full bg-gray-400 mt-2 flex-shrink-0"></div>
+                          <span>{highlight}</span>
+                        </li>
+                      ))
+                    ) : (
+                      <>
+                        <li className="flex items-start gap-3 text-gray-300">
+                          <div className="w-1 h-1 rounded-full bg-gray-400 mt-2 flex-shrink-0"></div>
+                          <span>Built using modern {project.category} development practices</span>
+                        </li>
+                        <li className="flex items-start gap-3 text-gray-300">
+                          <div className="w-1 h-1 rounded-full bg-gray-400 mt-2 flex-shrink-0"></div>
+                          <span>Integrated {project.technologies.length} different technologies</span>
+                        </li>
+                        <li className="flex items-start gap-3 text-gray-300">
+                          <div className="w-1 h-1 rounded-full bg-gray-400 mt-2 flex-shrink-0"></div>
+                          <span>Part of ongoing computer engineering portfolio</span>
+                        </li>
+                      </>
+                    )}
                   </ul>
                 </div>
 

@@ -4,20 +4,34 @@ import {
   FaGamepad,
   FaBrain,
   FaWifi,
-  FaSkiing
+  FaSkiing,
+  FaMemory,
+  FaBolt,
+  FaJava,
+  FaWaveSquare
 } from "react-icons/fa";
 import { 
   GiSkis,
-  GiCpu
+  GiCpu,
+  GiElectric,
+  GiSoundWaves
 } from "react-icons/gi";
 import { 
   BsSnow,
-  BsCodeSlash
+  BsCodeSlash,
+  BsDatabase,
+  BsShield
 } from "react-icons/bs";
 import { 
   SiDjango,
-  SiPython
+  SiPython,
+  SiSqlite
 } from "react-icons/si";
+import {
+  MdMemory,
+  MdGraphicEq,
+  MdSettingsInputComponent
+} from "react-icons/md";
 
 interface ProjectIconProps {
   projectId: string;
@@ -119,6 +133,112 @@ export default function ProjectIcon({ projectId, className = "h-full w-full" }: 
                 {/* Connection lines */}
                 <div className="absolute top-3 left-3 h-px w-4 bg-white/50 transform rotate-45" />
                 <div className="absolute bottom-4 left-5 h-px w-6 bg-white/50 transform -rotate-12" />
+              </div>
+            </div>
+          </div>
+        );
+
+      case "memory-data-logging":
+        return (
+          <div className="relative h-full w-full flex items-center justify-center bg-gradient-to-br from-indigo-600 to-purple-700">
+            {/* Memory & Data Systems */}
+            <div className="relative">
+              <MdMemory className="h-20 w-20 text-white" />
+              <FaMemory className="h-8 w-8 text-cyan-300 absolute -top-2 -right-2" />
+              
+              {/* SPI/I2C Communication lines */}
+              <div className="absolute inset-0">
+                <div className="absolute top-4 left-2 h-1 w-6 bg-green-400 rounded" />
+                <div className="absolute top-6 left-2 h-1 w-8 bg-blue-400 rounded" />
+                <div className="absolute bottom-4 right-2 h-1 w-6 bg-yellow-400 rounded" />
+                <div className="absolute bottom-6 right-2 h-1 w-8 bg-orange-400 rounded" />
+              </div>
+              
+              {/* Data flow indicators */}
+              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
+                <div className="h-2 w-2 bg-white rounded-full animate-bounce" />
+                <div className="h-1 w-1 bg-white/70 rounded-full animate-bounce mt-1" style={{ animationDelay: "0.2s" }} />
+              </div>
+            </div>
+          </div>
+        );
+
+      case "boost-converter":
+        return (
+          <div className="relative h-full w-full flex items-center justify-center bg-gradient-to-br from-yellow-500 to-orange-600">
+            {/* Power Electronics */}
+            <div className="relative">
+              <GiElectric className="h-20 w-20 text-white" />
+              <FaBolt className="h-8 w-8 text-yellow-300 absolute -top-2 -left-2" />
+              <MdSettingsInputComponent className="h-6 w-6 text-blue-300 absolute -bottom-2 -right-2" />
+              
+              {/* Voltage indicators */}
+              <div className="absolute inset-0">
+                <div className="absolute top-2 left-6 text-xs font-bold text-white bg-green-500 px-1 rounded">5V</div>
+                <div className="absolute bottom-2 right-4 text-xs font-bold text-white bg-red-500 px-1 rounded">14V</div>
+              </div>
+              
+              {/* PWM wave visualization */}
+              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2">
+                <FaWaveSquare className="h-4 w-4 text-cyan-300 animate-pulse" />
+              </div>
+            </div>
+          </div>
+        );
+
+      case "uva-course-review":
+        return (
+          <div className="relative h-full w-full flex items-center justify-center bg-gradient-to-br from-blue-600 to-indigo-700">
+            {/* Database Application */}
+            <div className="relative">
+              <BsDatabase className="h-20 w-20 text-white" />
+              <FaJava className="h-8 w-8 text-orange-400 absolute -top-2 -right-2" />
+              <SiSqlite className="h-6 w-6 text-blue-300 absolute -bottom-2 -left-2" />
+              <BsShield className="h-6 w-6 text-green-400 absolute top-2 left-2" />
+              
+              {/* Data entries */}
+              <div className="absolute inset-0">
+                <div className="absolute top-6 right-4 h-1 w-3 bg-white/60 rounded" />
+                <div className="absolute top-8 right-4 h-1 w-4 bg-white/60 rounded" />
+                <div className="absolute top-10 right-4 h-1 w-2 bg-white/60 rounded" />
+                
+                <div className="absolute bottom-6 left-4 h-1 w-3 bg-white/60 rounded" />
+                <div className="absolute bottom-8 left-4 h-1 w-4 bg-white/60 rounded" />
+                <div className="absolute bottom-10 left-4 h-1 w-2 bg-white/60 rounded" />
+              </div>
+              
+              {/* University badge */}
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <div className="text-xs font-bold text-white bg-orange-500 px-2 py-1 rounded-full">UVA</div>
+              </div>
+            </div>
+          </div>
+        );
+
+      case "audio-spectrum-analyzer":
+        return (
+          <div className="relative h-full w-full flex items-center justify-center bg-gradient-to-br from-pink-500 to-purple-600">
+            {/* Signal Processing */}
+            <div className="relative">
+              <MdGraphicEq className="h-20 w-20 text-white" />
+              <GiSoundWaves className="h-8 w-8 text-cyan-300 absolute -top-2 -right-2" />
+              
+              {/* Frequency bars */}
+              <div className="absolute inset-0 flex items-end justify-center gap-1">
+                <div className="h-3 w-1 bg-green-400 rounded animate-pulse" />
+                <div className="h-5 w-1 bg-yellow-400 rounded animate-pulse" style={{ animationDelay: "0.1s" }} />
+                <div className="h-8 w-1 bg-orange-400 rounded animate-pulse" style={{ animationDelay: "0.2s" }} />
+                <div className="h-6 w-1 bg-red-400 rounded animate-pulse" style={{ animationDelay: "0.3s" }} />
+                <div className="h-4 w-1 bg-purple-400 rounded animate-pulse" style={{ animationDelay: "0.4s" }} />
+              </div>
+              
+              {/* Filter indicators */}
+              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
+                <div className="text-xs font-bold text-white bg-blue-500 px-1 rounded">745Hz</div>
+              </div>
+              
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <div className="text-xs font-bold text-white bg-green-500 px-1 rounded">500Hz</div>
               </div>
             </div>
           </div>
