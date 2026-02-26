@@ -2,16 +2,79 @@
 
 import { motion } from "framer-motion";
 
-const skills = [
-  { name: "C / C++ / Embedded", level: 93 },
-  { name: "Python / Django", level: 90 },
-  { name: "Verilog / FPGA / RISC-V", level: 82 },
-  { name: "IoT / RTOS / BLE / NFC", level: 85 },
-  { name: "Hardware / PCB Design", level: 88 },
-  { name: "Java / JavaFX", level: 85 },
-  { name: "JavaScript / HTML / CSS", level: 78 },
-  { name: "Security / Networking", level: 76 },
-  { name: "Cloud / Databases", level: 74 },
+const skillModules = [
+  {
+    category: "EMBEDDED & HARDWARE",
+    accent: "text-cyan",
+    items: [
+      "C/C++",
+      "Verilog",
+      "RISC-V",
+      "Zephyr RTOS",
+      "STM32",
+      "nRF52840DK",
+      "TM4C123",
+      "PCB Design",
+      "KiCad",
+      "Keil",
+      "Signal Analysis",
+    ],
+  },
+  {
+    category: "SOFTWARE & WEB",
+    accent: "text-amber",
+    items: [
+      "Python",
+      "Django",
+      "Java",
+      "JavaFX",
+      "JavaScript",
+      "HTML/CSS",
+      "SQL",
+      "MATLAB",
+    ],
+  },
+  {
+    category: "PROTOCOLS & IOT",
+    accent: "text-neon",
+    items: [
+      "BLE / GATT",
+      "NFC",
+      "CAN Bus",
+      "SPI",
+      "I2C",
+      "UART",
+      "Memory-Mapped I/O",
+    ],
+  },
+  {
+    category: "SECURITY & NETWORKING",
+    accent: "text-danger",
+    items: [
+      "Wireshark",
+      "Nmap",
+      "Metasploit",
+      "Cryptography",
+      "Penetration Testing",
+    ],
+  },
+  {
+    category: "TOOLS & INFRA",
+    accent: "text-dim",
+    items: [
+      "Git",
+      "VS Code",
+      "ModelSim",
+      "Multisim",
+      "STM32CubeIDE",
+      "nRF Connect SDK",
+      "LaTeX",
+      "AWS S3",
+      "PostgreSQL",
+      "SQLite",
+      "Heroku",
+    ],
+  },
 ];
 
 const timeline = [
@@ -44,37 +107,6 @@ const timeline = [
       "Contributing to diversity initiatives, organizing career panels, and supporting mentorship programs connecting students with industry professionals.",
   },
 ];
-
-function SkillBar({
-  name,
-  level,
-  index,
-}: {
-  name: string;
-  level: number;
-  index: number;
-}) {
-  return (
-    <div className="group">
-      <div className="mb-1.5 flex items-center justify-between font-mono text-xs">
-        <span className="text-dim transition-colors group-hover:text-body">
-          {name}
-        </span>
-        <span className="text-faint">{level}%</span>
-      </div>
-      <div className="h-1.5 w-full overflow-hidden bg-line">
-        <motion.div
-          className="h-full bg-cyan"
-          initial={{ width: 0 }}
-          whileInView={{ width: `${level}%` }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 1, delay: index * 0.08, ease: "easeOut" }}
-          style={{ boxShadow: "0 0 8px rgba(0,255,242,0.3)" }}
-        />
-      </div>
-    </div>
-  );
-}
 
 export function AboutContent() {
   return (
@@ -212,54 +244,43 @@ export function AboutContent() {
                 style={{ animation: "pulse-line 2s infinite" }}
               />
               <span className="font-mono text-[10px] tracking-widest text-faint">
-                SYSTEM DIAGNOSTICS
+                LOADED MODULES
               </span>
             </div>
 
-            <div className="space-y-5">
-              {skills.map((skill, i) => (
-                <SkillBar key={skill.name} {...skill} index={i} />
+            <div className="space-y-6">
+              {skillModules.map((mod, mi) => (
+                <motion.div
+                  key={mod.category}
+                  initial={{ opacity: 0, y: 8 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: mi * 0.08, duration: 0.35 }}
+                >
+                  <div className="mb-2.5 flex items-center gap-2">
+                    <span className={`font-mono text-[10px] ${mod.accent}`}>
+                      ●
+                    </span>
+                    <span className="font-mono text-[10px] tracking-widest text-faint">
+                      {mod.category}
+                    </span>
+                  </div>
+                  <div className="flex flex-wrap gap-1.5">
+                    {mod.items.map((item) => (
+                      <span
+                        key={item}
+                        className="border border-line-bright bg-base px-2 py-1 font-mono text-[10px] text-dim transition-colors hover:border-cyan/25 hover:text-body"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </motion.div>
               ))}
             </div>
 
             <div className="mt-6 border-t border-line pt-4 font-mono text-[10px] text-faint">
-              <span className="text-neon">●</span> ALL SYSTEMS NOMINAL
-            </div>
-          </div>
-
-          {/* Tools & hardware */}
-          <div className="mt-6 border border-line bg-surface p-6">
-            <div className="mb-4 flex items-center gap-3 border-b border-line pb-3">
-              <div className="h-2 w-2 rounded-full bg-cyan-mid" />
-              <span className="font-mono text-[10px] tracking-widest text-faint">
-                HARDWARE & TOOLS
-              </span>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {[
-                "STM32CubeIDE",
-                "Keil",
-                "KiCad",
-                "Multisim",
-                "ModelSim",
-                "Oscilloscope",
-                "nRF52840DK",
-                "TM4C123",
-                "PCB Assembly",
-                "Wireshark",
-                "Nmap",
-                "Git",
-                "LaTeX",
-                "AWS S3",
-                "PostgreSQL",
-              ].map((tool) => (
-                <span
-                  key={tool}
-                  className="border border-line-bright bg-base px-2 py-1 font-mono text-[10px] text-faint transition-colors hover:border-cyan/20 hover:text-cyan/60"
-                >
-                  {tool}
-                </span>
-              ))}
+              <span className="text-neon">●</span> ALL MODULES LOADED
             </div>
           </div>
         </motion.div>
