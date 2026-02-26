@@ -75,12 +75,38 @@ export function HomeContent() {
                 software. Embedded systems, IoT, and security. UVA &apos;26.
               </motion.p>
 
-              {/* Status indicators */}
+              {/* Resume + Status */}
               <motion.div
-                className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-xs"
+                className="mt-8 flex flex-wrap items-center gap-4"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.9 }}
+              >
+                <a
+                  href="/resume.pdf"
+                  download="Marvin_Rivera_Resume.pdf"
+                  className="group flex items-center gap-2.5 border border-cyan/30 bg-cyan/5 px-5 py-2.5 font-mono text-xs tracking-widest text-cyan transition-all hover:border-cyan/60 hover:bg-cyan/10"
+                >
+                  <span className="text-cyan/50 transition-colors group-hover:text-cyan">
+                    ↓
+                  </span>
+                  DOWNLOAD RESUME
+                </a>
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono text-xs tracking-wider text-faint transition-colors hover:text-dim"
+                >
+                  [VIEW PDF]
+                </a>
+              </motion.div>
+
+              <motion.div
+                className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-xs"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.05 }}
               >
                 <span className="text-faint">
                   STATUS:{" "}

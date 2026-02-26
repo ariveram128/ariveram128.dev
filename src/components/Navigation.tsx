@@ -55,6 +55,14 @@ export function Navigation() {
               </Link>
             );
           })}
+
+          <a
+            href="/resume.pdf"
+            download="Marvin_Rivera_Resume.pdf"
+            className="ml-2 border border-cyan/25 bg-cyan/5 px-3 py-1.5 font-mono text-xs tracking-wider text-cyan transition-all hover:border-cyan/50 hover:bg-cyan/10"
+          >
+            ↓ RESUME
+          </a>
         </div>
 
         {/* Mobile toggle */}
@@ -105,6 +113,13 @@ export function Navigation() {
                   </Link>
                 );
               })}
+              <a
+                href="/resume.pdf"
+                download="Marvin_Rivera_Resume.pdf"
+                className="mt-1 inline-flex w-fit border border-cyan/25 bg-cyan/5 px-3 py-1.5 font-mono text-sm tracking-wider text-cyan transition-all hover:border-cyan/50"
+              >
+                ↓ RESUME
+              </a>
             </div>
           </motion.div>
         )}
