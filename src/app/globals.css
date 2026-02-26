@@ -1,26 +1,216 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-base: #0a0a0f;
+  --color-surface: #111118;
+  --color-elevated: #1a1a28;
+  --color-line: #1c1c2e;
+  --color-line-bright: #2e2e48;
+
+  --color-cyan: #00fff2;
+  --color-cyan-mid: #00a8a0;
+  --color-cyan-dim: #004a48;
+  --color-amber: #ffb800;
+  --color-amber-dim: #5c4200;
+  --color-neon: #39ff14;
+  --color-danger: #ff3344;
+
+  --color-heading: #e8e8f0;
+  --color-body: #c8c8d8;
+  --color-dim: #6e6e90;
+  --color-faint: #363650;
+
+  --font-display: var(--font-orbitron);
+  --font-mono: var(--font-ibm-plex-mono);
+  --font-body: var(--font-syne);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-base);
+  color: var(--color-body);
+  font-family: var(--font-body), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* ─── Scrollbar ─── */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-base);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-line-bright);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-cyan-mid);
+}
+
+/* ─── Phosphor Glow ─── */
+
+.glow-cyan {
+  text-shadow:
+    0 0 7px rgba(0, 255, 242, 0.6),
+    0 0 20px rgba(0, 255, 242, 0.25),
+    0 0 42px rgba(0, 255, 242, 0.1);
+}
+.glow-amber {
+  text-shadow:
+    0 0 7px rgba(255, 184, 0, 0.6),
+    0 0 20px rgba(255, 184, 0, 0.25),
+    0 0 42px rgba(255, 184, 0, 0.1);
+}
+.glow-green {
+  text-shadow:
+    0 0 7px rgba(57, 255, 20, 0.6),
+    0 0 20px rgba(57, 255, 20, 0.25),
+    0 0 42px rgba(57, 255, 20, 0.1);
+}
+
+.box-glow-cyan {
+  box-shadow:
+    0 0 10px rgba(0, 255, 242, 0.1),
+    0 0 30px rgba(0, 255, 242, 0.04),
+    inset 0 0 10px rgba(0, 255, 242, 0.03);
+}
+
+/* ─── CRT Overlays ─── */
+
+.crt-scanlines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.035) 2px,
+    rgba(0, 0, 0, 0.035) 4px
+  );
+}
+
+.crt-vignette {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 50%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+}
+
+/* ─── Keyframes ─── */
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 1;
+  }
+  93% {
+    opacity: 0.82;
+  }
+  94% {
+    opacity: 1;
+  }
+  96.5% {
+    opacity: 0.9;
+  }
+  97% {
+    opacity: 1;
+  }
+}
+
+@keyframes glitch-1 {
+  0%,
+  100% {
+    clip-path: inset(0 0 0 0);
+    transform: translate(0);
+  }
+  20% {
+    clip-path: inset(20% 0 60% 0);
+    transform: translate(-3px, 0);
+  }
+  40% {
+    clip-path: inset(60% 0 5% 0);
+    transform: translate(3px, 0);
+  }
+  60% {
+    clip-path: inset(40% 0 40% 0);
+    transform: translate(-2px, 0);
+  }
+  80% {
+    clip-path: inset(80% 0 2% 0);
+    transform: translate(1px, 0);
+  }
+}
+
+@keyframes glitch-2 {
+  0%,
+  100% {
+    clip-path: inset(0 0 0 0);
+    transform: translate(0);
+  }
+  20% {
+    clip-path: inset(70% 0 10% 0);
+    transform: translate(3px, 0);
+  }
+  40% {
+    clip-path: inset(10% 0 70% 0);
+    transform: translate(-3px, 0);
+  }
+  60% {
+    clip-path: inset(50% 0 30% 0);
+    transform: translate(2px, 0);
+  }
+  80% {
+    clip-path: inset(5% 0 80% 0);
+    transform: translate(-1px, 0);
+  }
+}
+
+@keyframes pulse-line {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.cursor-blink::after {
+  content: "█";
+  animation: blink 1s step-end infinite;
+  color: var(--color-cyan);
+  margin-left: 2px;
+}
+
+/* ─── Selection ─── */
+
+::selection {
+  background: rgba(0, 255, 242, 0.2);
+  color: #fff;
 }

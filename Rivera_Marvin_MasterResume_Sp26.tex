@@ -1,0 +1,300 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{textcomp}
+
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+% Formatting
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+\setlength{\footskip}{5pt} % Adjust this value to control the distance of the page number from the bottom
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section Formatting
+\titleformat{\section}{
+  \vspace{-4pt}\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+% Custom Commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.99\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+
+%----------------------------------------------------------------------------------------
+% DOCUMENT START
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+% HEADER
+%----------------------------------------------------------------------------------------
+\begin{center}
+    {\Huge \bfseries Marvin Rivera Martinez} \\ \vspace{1pt}
+    Harrisonburg, VA 22802 \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ 540-575-6852 ~ 
+    \href{mailto:mrvnlxndrrvr2@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{mrvnlxndrrvr2@gmail.com}} \\ \vspace{2pt}
+    \href{https://ariveram128dev.vercel.app}{\raisebox{-0.2\height}\faGlobe\ \underline{ariveram128dev.vercel.app}} ~
+    \href{https://linkedin.com/in/ariveram128}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/ariveram128}} ~
+    \href{https://github.com/ariveram128}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/ariveram128}}
+    \vspace{-8pt}
+\end{center}
+
+%----------------------------------------------------------------------------------------
+% EDUCATION & HONORS SECTION
+%----------------------------------------------------------------------------------------
+\section{Education \& Honors}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Virginia}{Expected Graduation: May 2026}
+      {B.S. in Computer Engineering, Minor in Data Science, GPA: 3.5/4.0}{Charlottesville, VA}
+      \resumeItemListStart
+        \resumeItem{\textbf{Honors:} Dean's List (Spring 2023, Spring 2024, Fall 2024), QuestBridge National Scholar}
+        \resumeItem{\textbf{Relevant Coursework:} Computer Architecture \& Design, Advanced Embedded Systems, Operating Systems, Software Engineering, Digital Logic Design, Computer Systems \& Organization I/II, Electronics, Applied Circuits, Cybersecurity, Signals \& Systems, Internet of Things}
+        \resumeItem{\textbf{Technical Focus:} Embedded systems design, PCB layout, security assessment, hardware-software integration}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%----------------------------------------------------------------------------------------
+% TECHNICAL SKILLS SECTION
+%----------------------------------------------------------------------------------------
+\section{Technical Skills}
+    \begin{itemize}[leftmargin=0.15in, label={}]
+        \small{\item{
+        \textbf{Programming Languages}{: C/C++, Java (Advanced), Python (Advanced), Django, JavaScript, HTML/CSS, SQL, MATLAB, Verilog} \\
+        \textbf{Engineering Tools}{: Git, VS Code, STM32CubeIDE, Keil, KiCad, Multisim, Ultiboard, JavaFX, LaTeX, ModelSim, nRF Connect SDK, Zephyr RTOS} \\
+        \textbf{Hardware \& Testing}{: Oscilloscopes, Function Generators, PCB Design \& Assembly, Signal Analysis, TM4C123, nRF52840DK, RISC-V Architecture} \\
+        \textbf{Security Expertise}{: Network Analysis (Wireshark), Penetration Testing (Nmap, Metasploit), Cryptography} \\
+        \textbf{Cloud \& DB}{: AWS S3, PostgreSQL, SQLite, Heroku} \\
+        \textbf{Languages}{: Fluent in Spanish \& English, Proficiency in Italian}
+        }}
+    \end{itemize}
+
+%----------------------------------------------------------------------------------------
+% TEACHING EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\section{Teaching Experience}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+            {\textbf{University of Virginia} $|$ \emph{Teaching Assistant, Computer Systems \& Organization II (CS 3130)}}{Spring 2025 -- Present}
+            \resumeItemListStart
+                \resumeItem{Mentor and guide students in advanced computer systems topics including systems architecture, concurrency, virtual memory, networking, and security}
+                \resumeItem{Facilitate weekly laboratory sections to help students complete practical assignments and develop system-level programming skills}
+                \resumeItem{Hold regular office hours to provide one-on-one support for complex topics such as cache coherency, DMA, and network protocols}
+                \resumeItem{Grade quizzes and homework assignments, providing detailed feedback to improve student understanding}
+                \resumeItem{Answer student questions on course discussion board (Piazza) to support learning outside class time}
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
+    
+%----------------------------------------------------------------------------------------
+% LEADERSHIP & PROFESSIONAL DEVELOPMENT SECTION
+%----------------------------------------------------------------------------------------
+\section{Leadership \& Professional Development}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+            {\textbf{Solar Car Team} $|$ \emph{Hardware Integration Team Member}}{Sep 2023 -- Present}
+            \resumeItemListStart
+                \resumeItem{Collaborated on PCB designs for telemetry and steering wheel systems using KiCad, implementing specifications from requirements documentation}
+                \resumeItem{Assisted with component selection and wiring plans for EMI protection in vehicle electronics systems}
+                \resumeItem{Contributed to STM32-based steering interface with CAN protocols as specified in project requirements}
+                \resumeItem{Participated in communication architecture development for real-time data transmission within the vehicle}
+            \resumeItemListEnd
+            \vspace{-12pt}
+        \resumeProjectHeading
+            {\textbf{Engineering Student Council} $|$ \emph{Diversity Committee Member}}{Fall 2024 -- Present}
+            \resumeItemListStart
+                \resumeItem{Contributed to diversity initiatives to increase underrepresented student participation in engineering events}
+                \resumeItem{Assisted in organizing career panels and networking sessions for engineering students}
+                \resumeItem{Supported mentorship program connecting students with industry professionals}
+                \resumeItem{Helped manage budget allocation for diversity and inclusion programs}
+            \resumeItemListEnd
+            \vspace{-12pt}
+        \resumeProjectHeading
+            {\textbf{Society of Hispanic Professional Engineers (SHPE)} $|$ \emph{Active Member \& Mentor}}{Sep 2022 -- Present}
+            \resumeItemListStart
+                \resumeItem{Selected as UVA representative for 2024 SHPE National Convention, recognized for technical engagement}
+                \resumeItem{Mentored first-year Computer Engineering students to support their academic progress}
+                \resumeItem{Developed study materials for core engineering courses to assist fellow students}
+                \resumeItem{Participated in outreach programs to promote Hispanic participation in STEM fields}
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%----------------------------------------------------------------------------------------
+% ENGINEERING PROJECTS SECTION
+%----------------------------------------------------------------------------------------
+\section{Engineering Projects}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+            {\textbf{TALOS Autonomous Jenga-Playing Robot} $|$ \emph{Capstone Project Lead}}{Fall 2025}
+            \resumeItemListStart
+                \resumeItem{Led 4-person team developing autonomous robotic system achieving 73\% gameplay success rate; architected MVC GUI with thread-safe event bus enabling real-time hardware control and live video annotation}
+                \resumeItem{Reverse-engineered closed-source Dobot SDK serial protocols to enable Linux-based control, implementing custom Python drivers for multi-threaded hardware coordination}
+                \resumeItem{Engineered vision pipeline with Intel RealSense D405 achieving 94.84\% block detection accuracy; implemented Kabsch algorithm calibration achieving $<$3mm positioning error across XYZ axes}
+            \resumeItemListEnd
+            \vspace{-12pt}
+    
+        \resumeProjectHeading
+            {\textbf{SkiRentals Web Application} $|$ \emph{Software Architect \& Lead Developer (CS 3240 Group Project)}}{Spring 2025}
+            \resumeItemListStart
+                \resumeItem{Spearheaded the architecture design and led development of a full-stack web application for cataloging and lending ski equipment using Django, Python, PostgreSQL, and AWS S3.}
+                \resumeItem{Engineered core backend features including database schema design, user authentication (Google OAuth2), role-based access control, image uploads to S3, and rental/pricing logic.}
+                \resumeItem{Developed key frontend components and user interfaces for homepage, dashboards, equipment catalog, and user profiles using HTML, CSS, and JavaScript, ensuring responsive design.}
+                \resumeItem{Customized the Django admin interface for enhanced site management, including image thumbnails and themed styling; implemented unit tests and configured CI/CD pipelines for Heroku deployment.}
+            \resumeItemListEnd
+            \vspace{-12pt}
+
+        \resumeProjectHeading
+            {\textbf{RentScan - Wireless NFC Tag Rental System} $|$ \emph{Project Lead \& Primary Developer (CS/ECE4501 WiOT)}}{Spring 2025}
+            \resumeItemListStart
+                \resumeItem{Led the design and primarily developed a wireless rental management system, architecting the NFC and Bluetooth Low Energy (BLE) communication between nRF52840DK devices.}
+                \resumeItem{Engineered firmware using Zephyr RTOS and nRF Connect SDK for an NFC reader (main device) and a BLE gateway, enabling tag data processing and rental status updates.}
+                \resumeItem{Implemented NFC tag (NTAG216) interaction, BLE GATT services for data transmission, and a simulated backend with rental database management on the gateway device.}
+                \resumeItem{Directed system design, feature implementation (rental expiration logic, command-line interface), and spearheaded troubleshooting of BLE connectivity and GATT services.}
+            \resumeItemListEnd
+            \vspace{-12pt}
+
+        \resumeProjectHeading
+            {\textbf{Candy Ninja Game} $|$ \emph{Lead Developer \& System Integrator (ECE4501 Group Project)}}{Spring 2025}
+            \resumeItemListStart
+                \resumeItem{Led core development and integration for an interactive TM4C123 microcontroller game, with primary responsibility for sound design, game state logic (game over, restart), and an advanced deadlock prevention algorithm for sprite movement.}
+                \resumeItem{Engineered and debugged critical game components including joystick input processing, slicer graphics, scoring system, UI display, and level progression mechanics, significantly enhancing overall stability and playability.}
+                \resumeItem{Implemented and optimized an RTOS environment with multiple synchronized threads for concurrent game logic, LCD rendering, and peripheral management, ensuring responsive performance.}
+                \resumeItem{Utilized Keil for firmware development, configured ADC for joystick input, managed GPIOs for LED feedback, and created custom bitmaps for game assets.}
+            \resumeItemListEnd
+            \vspace{-12pt}
+
+        \resumeProjectHeading
+            {\textbf{RISC-V CPU with Memory-Mapped UART} $|$ \emph{Lead Designer \& Developer (ECE4435 Final Project)}}{Fall 2024}
+            \resumeItemListStart
+                \resumeItem{Designed, implemented, and verified a complete RISC-V CPU system in Verilog, featuring an RV32I core and a custom memory-mapped UART peripheral.}
+                \resumeItem{Developed the multi-cycle datapath and controller for the CPU, and integrated it with custom-designed RAM (4KB), ROM (8KB), and an address decoder.}
+                \resumeItem{Engineered a memory-mapped UART (8-E-1 format) with transmit/receive data registers, status flags (TxRDY, RxRDY, RxParityErr), and an integrated baud rate generator.}
+                \resumeItem{Created a comprehensive verification environment using ModelSim, including a Verilog testbench and a RISC-V assembly program to successfully transmit "Hello, world!" via UART polling.}
+            \resumeItemListEnd
+            \vspace{-12pt}
+
+        \resumeProjectHeading
+            {\textbf{Research on Entity-Specific Biases in Text Classification Models} $|$ \emph{First Author (Independent Research)}}{Spring 2025}
+            \resumeItemListStart
+                \resumeItem{Led a research project investigating entity-specific biases in NLP models (toxicity and sentiment analysis) across nationality, gender, and anthroponymic attributes.}
+                \resumeItem{Adapted and extended the Perturbation Sensitivity Analysis (PSA) framework to quantify bias, constructing custom corpora and defining evaluation metrics (ScoreSens, ScoreDev, LabelDist).}
+                \resumeItem{Analyzed model responses (e.g., "unitary/toxic-bert", "distilbert-base-uncased-finetuned-sst-2-english") to perturbed data, revealing significant variations in sentiment scores based on names and nationality adjectives.}
+                \resumeItem{Co-authored a research paper detailing the methodology, corpus construction (using Tatoeba, Wikipedia, RtGender, Python names-dataset), statistical validation, and findings on differential model treatment.}
+            \resumeItemListEnd
+            \vspace{-12pt}
+            
+        \resumeProjectHeading
+            {\textbf{Memory Integration and Data Logging System} $|$ \emph{Advanced Embedded Systems Project}}{Fall 2024}
+            \resumeItemListStart
+                \resumeItem{Designed and implemented a memory map system that unified access to multiple SPI and I2C flash memory devices}
+                \resumeItem{Developed low-level ReadByte() and WriteByte() functions to create a continuous address space across six different memory devices}
+                \resumeItem{Implemented a data acquisition system that sampled analog signals, processed data, and stored values to external memory}
+                \resumeItem{Conducted performance analysis measuring maximum sampling frequencies across different configurations with accuracy within 1.1\% of theoretical calculations}
+            \resumeItemListEnd
+            \vspace{-12pt}
+        \resumeProjectHeading
+            {\textbf{Boost Converter Circuit} $|$ \emph{Applied Circuits Design Project}}{Fall 2023}
+            \resumeItemListStart
+                \resumeItem{Designed a DC-to-DC boost converter using a 555 timer to generate PWM signals for MOSFET switching}
+                \resumeItem{Calculated optimal component values through circuit analysis to achieve voltage step-up from 5V to 14V}
+                \resumeItem{Created PCB layout in Ultiboard with proper ground plane, trace routing, and component placement}
+                \resumeItem{Assembled and tested the physical circuit, verifying performance through oscilloscope measurements that matched theoretical calculations within 5\% tolerance}
+            \resumeItemListEnd
+            \vspace{-12pt}
+        \resumeProjectHeading
+            {\textbf{UVA Course Review System} $|$ \emph{Software Development Team Member}}{Spring 2024}
+            \resumeItemListStart
+                \resumeItem{Designed and implemented components of a CRUD application using Java, JavaFX, and SQLite database}
+                \resumeItem{Developed authentication system with secure password handling for user accounts}
+                \resumeItem{Created test cases to verify system functionality and identify potential issues}
+                \resumeItem{Structured database queries for efficient data retrieval in course review operations}
+            \resumeItemListEnd
+            \vspace{-12pt}
+        \resumeProjectHeading
+            {\textbf{Audio Spectrum Analyzer} $|$ \emph{Simulation Lead}}{April 2024}
+            \resumeItemListStart
+                \resumeItem{Executed computer simulations to validate Sallen-Key filter designs, matching experimental results to theoretical models}
+                \resumeItem{Analyzed frequency response characteristics of filters with measured corner frequencies at 745Hz and 500Hz}
+                \resumeItem{Performed signal analysis on audio tracks to determine optimal frequency cutoff points for the system}
+                \resumeItem{Compiled simulation results and authored technical documentation sections for the final project report}
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%----------------------------------------------------------------------------------------
+% PROFESSIONAL EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\section{Professional Experience}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+            {\textbf{Olive Garden} $|$ \emph{Server \& Returning Team Member}}{Jun 2021 -- Aug 2025}
+            \resumeItemListStart
+                \resumeItem{Consistently rehired across multiple summers (2021-2022, 2023, 2024, 2025) demonstrating exceptional performance and reliability}
+                \resumeItem{Maintained high customer satisfaction ratings through attentive service and problem-solving skills}
+                \resumeItem{Developed strong communication and multitasking abilities in fast-paced, high-pressure environment}
+            \resumeItemListEnd
+            \vspace{-12pt}
+        \resumeProjectHeading
+            {\textbf{El Charro Mexican Restaurant} $|$ \emph{Shift Manager}}{Oct 2020 -- Jun 2021}
+            \resumeItemListStart
+                \resumeItem{Managed closing operations for high-revenue restaurant generating \$2,000-\$10,000+ in daily sales}
+                \resumeItem{Handled cash management responsibilities including drawer reconciliation, deposit preparation, and tip distribution to staff}
+                \resumeItem{Led and supervised team of employees during high-volume service periods and end-of-shift procedures}
+                \resumeItem{Trained new staff members on procedures, safety protocols, and customer service standards}
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\end{document}
